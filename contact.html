@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            
+            </div>
+            <nav>
+                <ul id="menu-item">
+                    <li><a href="index.html">Home</a></li>
+                     <li><a href="product.html">Product</a></li>
+                       <li><a href="contact.html">Contact</a></li>
+                       <li><a href="about.html">About</a></li>
+                       <li><a href="account.php">Account</a></li>
+                      
+                          </ul>
+                          </nav>
+                        <a href="cart.html" ><img src="cart.png" width="30px" height="30px" ></a>
+                        <img src="menu.png "class="menu" onclick="toggle()">
+    </div>
+    <div class="contact-container">
+
+        <!-- Form for contact between customer and support team -->
+        <form onsubmit="sendEmail(); reset(); return false">
+            <h1>Lets get in touch</h1>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Email id" required>
+            <input type="text" id="phone" placeholder="Phone No" required>
+            <textarea name="message" id="message" rows="4" placeholder="How can we help you?" required></textarea>
+            <button id="button" type="submit">Send</button>
+            
+        </form>
+
+        <!-- End -->
+    </div>
+    </div>
+</div>
+
+    <script src="index.js"></script>
+    <script>
+        // When customer will click on send button this function will be called for sending notification.
+        function sendEmail(){
+            Email.send({
+              Host : 'smtp.mailtrap.io',  // Smtp Server
+            
+              // Use proper gmail for upcoming results
+              Username : "75c968c93a2f9f",
+              Password : '58e0399c822956',
+            //   Password : "3B05A122D55F58561AF6884917DA3E306696",
+
+              // Where i will recieve the Email.
+              To : "shahzadsafdar486@gmail.com",
+
+              // User Email.
+              From : document.getElementById('email').value,
+
+              // Subject for email.
+              Subject : "New contact form Enquiry",
+              Body :"Name: " + document.getElementById('name').value + 
+              "<br> Email: " + document.getElementById('email').value +
+              "<br> Phone No: " + document.getElementById('phone').value +
+              "<br> Message: " + document.getElementById('message').value,
+            }
+            ).then(
+                  message => alert("Message sent succefully")
+               );
+        }
+    </script>
+
+     <!-- ----------Footer-------- -->
+        <!-- footer -->
+<div class="footer">
+    <div class="container">
+<div class="row">
+                        
+
+<div class="footer-col-3">
+    <h3 style="text-decoration: underline; padding-bottom: 15px; padding-top: 15px;">Useful links</h3>
+    <ul>
+        <li>Coupon</li>
+        <li>Blog post</li>
+        <li>Return Policy</li>
+        <li>Join Affiliate</li>
+    </ul>
+</div>
+<div class="footer-col-4">
+    <h3 style="text-decoration: underline; padding-bottom: 15px; padding-top: 15px;">Follow us</h3>
+    <ul>
+        <li>Facebook</li>
+        <li>Instagram</li>
+        <li>Twitter</li>
+        <li>You Tube</li>
+    </ul>
+</div>
+</div>
+<hr>
+<p class="copy">Copy right 2021</p>
+</div>
+</div>
+
+
+<!-- js for toggle menu -->
+<script>
+    var menu=document.getElementById("menu-item");
+    menu.style.maxHeight="0px";
+    function toggle(){
+        if(menu.style.maxHeight=="0px"){
+            menu.style.maxHeight="200px";
+        }else{
+            menu.style.maxHeight="0px";
+        }
+    }
+   
+
+</script>
+</body>
+</html>

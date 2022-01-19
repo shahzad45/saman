@@ -1,0 +1,137 @@
+
+<!-- Refer to polished idea #3 in google drive -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Checkout</title>
+
+	<link rel="stylesheet" href="style.css">
+     <script src="index.js"></script>
+  	
+
+  	<!-- FavIcon -->
+  	<link rel="shortcut icon" href="../images/tomato.ico" type="image/x-icon">
+
+ 	<!-- Required Libaries -->
+  	<link href="../libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+  	<link href="../libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  	<link href="../libs/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+  	<!-- Font API'S -->
+  	<link href="https://fonts.googleapis.com/css?family=Oleo+Script|Roboto" rel="stylesheet">
+
+</head>
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <body style="background-color: #F2F2F2">
+<div class=".cpntainer">
+        <div class="navbar">
+    <div class="logo">
+        
+        </div>
+        <nav>
+            <ul id="menu-item">
+                <li><a href="index.html">Home</a></li>
+                 <li><a href="product.html">Product</a></li>
+                   <li><a href="contact.html">Contact</a></li>
+                   <li><a href="about.html">About</a></li>
+                    <li><a href="account.php">Account</a></li>
+                  
+                      </ul>
+                      </nav>
+                     <a href="cart.html"><img src="cart.png" width="30px" height="30px" ></a>
+                    <img src="menu.png "class="menu" onclick="toggle()">
+</div>
+
+	<div class="signup-card container-fluid" style="background-color: white">
+    <div class="col-md-8">
+      <form name="deliveryMethod">
+      <br>
+        <fieldset>
+          <legend>Delivery Method</legend>
+
+          <input type="radio" name="method" value="pickup" checked> Pick-up</br>
+          <input type="radio" name="method" value="delivery"> Delivery</br></br>
+        </fieldset>
+      </form>
+
+      <form name="contactInfo">
+        <fieldset>
+          <legend>Contact Info</legend>
+
+          Name*: <input style="margin-bottom: 5px;" type="text" name="name"> </br>
+          Email*: <input style="margin-bottom: 5px;" type="email" name="email"> </br>
+          Phone Number*: <input style="margin-bottom: 5px; width: 130px" type="text" name="phoneNum"> </br></br>
+          Address*: <input style="margin-bottom: 5px;" type="text" name="address"> </br>
+          City*: <input style="margin-bottom: 5px; width: 100px" type="text" name="city" value="Winnipeg">&nbsp;
+          Province*: <input style="margin-bottom: 5px; width: 30px" type="text" name="prov" value="MB"> </br>
+          Postal Code*: <input style="margin-bottom: 5px; width: 70px" type="text" name="pCode"> </br></br>
+        </fieldset>
+      </form>
+
+      <form>
+        <fieldset>
+          <legend>Special Instructions</legend>
+          <textarea name="addInfo" rows="5" cols="30" placeholder="allergy etc."></textarea>
+        </fieldset>
+      </form>
+
+      <form>
+        <br>
+        <fieldset>
+          <legend>Payment Method</legend>
+          <input type="radio" name="payment" checked> Credit Card&nbsp;
+          <input type="radio" name="payment"> Cash&nbsp;
+          <input type="radio" name="payment"> Payment-Card at the Door</br></br>
+          Cardholder Name*: <input style="margin-bottom: 5px;"" type="text" name="name"> </br>
+          Card Number*: <input style="margin-bottom: 5px;"" type="text" name="cardNum"> </br>
+          Exp Date*: <input type="text" placeholder="MM" style="width: 30px;"> / <input type="text" placeholder="YY" style="width: 30px;">&nbsp;
+          CVV*: <input type="text" name="cvv" style="width: 40px;"> </br>
+          &nbsp;<input type="checkbox" name="remCard"><i>*remember my payment info (signed-in only)</i>
+        </fieldset>
+      </form>
+
+      <a href="thank-you.html" class="btn btn-primary btn-lg btn-1"><span title="Submit" onclick="result()"></span>COMPLETE ORDER</span></a>
+      <br>
+      <br>
+
+    </div>
+
+</div>
+
+        <!-- footer -->
+<div class="footer">
+    <div class="container">
+<div class="row">
+
+<div class="footer-col-3">
+    <h3 style="text-decoration: underline; padding-bottom: 15px; padding-top: 15px;">Useful links</h3>
+    <ul>
+        <li>Coupon</li>
+        <li>Blog post</li>
+        <li>Return Policy</li>
+        <li>Join Affiliate</li>
+    </ul>
+</div>
+<div class="footer-col-4">
+    <h3 style="text-decoration: underline; padding-bottom: 15px; padding-top: 15px;">Follow us</h3>
+    <ul>
+        <li>Facebook</li>
+        <li>Instagram</li>
+        <li>Twitter</li>
+        <li>You Tube</li>
+    </ul>
+</div>
+</div>
+<hr>
+<p class="copy">Copy right 2021</p>
+</div>
+</div>
+    </body>
+    </html>
